@@ -8,9 +8,8 @@ import {
 } from '@thirdweb-dev/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import PropagateLoader from 'react-spinners/PropagateLoader';
 import Header from '../components/Header';
+import Loading from '../components/Loading';
 import Login from '../components/Login';
 
 const Home: NextPage = () => {
@@ -20,23 +19,7 @@ const Home: NextPage = () => {
   );
 
   if (isLoading) {
-    return (
-      <div className="bg-[#091B18] h-screen flex flex-col items-center justify-center">
-        <div className="flex items-center space-x-2 mb-10">
-          <Image
-            className="rounded-full h-20 w-20"
-            height={'100%'}
-            width={'100%'}
-            src="https://i.imgur.com/4h7mAu7.png"
-            alt="hero"
-          />
-          <h1 className="text-lg text-white font-bold">
-            Loading The Laxmi Chit Fund
-          </h1>
-        </div>
-        <PropagateLoader color="white" size={30} />
-      </div>
-    );
+    return <Loading />;
   }
   if (!address) return <Login />;
 
@@ -46,6 +29,24 @@ const Home: NextPage = () => {
         <title>Laxmi Chit Fund</title>
       </Head>
       <Header />
+
+      {/* Draw Box */}
+      <div>
+        <div>
+          <h1 className="text-5xl font-semibold text-white text-center">
+            The Next Draw
+          </h1>
+        </div>
+        <div className="flex justify-between p-2 space-x-2">
+          <div className="stats">
+            <h2 className="text-sm">Total Pool</h2>
+            <p className="text-xl">0.1 MATIC</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Price per ticket box */}
+      <div></div>
     </div>
   );
 };
