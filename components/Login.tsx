@@ -10,7 +10,7 @@ function Login() {
           className="rounded-full h-56 w-56 mb-10"
           width={'100%'}
           height={'100%'}
-          src="https://i.imgur.com/4h7mAu7.png"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_8kFtx7BOXyCfytx-V1OgHlIdZf_fhpa__nlofFRps2vQyQakpvEclk_3z_Q9Smtw7TQ&usqp=CAU"
           alt="hero"
         />
         <h1 className="text-6xl text-white font-bold">THE LAXMI CHIT FUND</h1>
