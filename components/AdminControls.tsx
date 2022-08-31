@@ -22,7 +22,6 @@ function AdminControls() {
     contract,
     'operatorTotalCommission'
   );
-  console.log(totalCommission);
   const { mutateAsync: DrawWinnerTicket } = useContractCall(
     contract,
     'DrawWinnerTicket'

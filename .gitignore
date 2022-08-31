@@ -35,7 +35,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/lottery-smart-contract
-lottery-smart-contract
+
+lottery-smart-contract/node_modules
 
 notes.txt
